@@ -11,95 +11,101 @@
 
 -->
 
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es"> <!-- Declaración del tipo de documento HTML y el idioma -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Horario Escolar</title>
-  <style>
-    table{
-      border-collapse: collapse;
-    }
-  </style>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para una mejor visualización en dispositivos móviles -->
+    <title>Horario escolar</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Fuente de la página */
+            background-color: #f4f4f4; /* Color de fondo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center; /* Alinea el título al centro */
+            color: #333; /* Color del texto del título */
+        }
+        table {
+            border-collapse: collapse; /* Elimina los espacios entre las celdas */
+            width: 80%; /* Ancho de la tabla */
+            margin: 20px auto; /* Centra la tabla horizontalmente */
+            background-color: #fff; /* Color de fondo de la tabla */
+        }
+        th, td {
+            border: 1px solid #ddd; /* Borde de las celdas */
+            padding: 10px; /* Espaciado dentro de las celdas */
+            text-align: center; /* Alinea el texto al centro */
+        }
+        th {
+            background-color: #4CAF50; /* Color de fondo de las celdas de encabezado */
+            color: white; /* Color del texto de las celdas de encabezado */
+        }
+        td {
+            background-color: #f9f9f9; /* Color de fondo de las celdas de datos */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Color de fondo para filas pares */
+        }
+    </style>
 </head>
-
 <body>
-  
-  <table border="1" >
-    <caption>Horario Escolar</caption>
-    <tr>
-      <th>&nbsp;</th>
-      <th>Lunes</th>
-      <th>Martes</th>
-      <th>Miércoles</th>
-      <th>Jueves</th>
-      <th>Viernes</th>
-    </tr>
-
-    <tr>
-      <th>8:00</th>
-      <td>Clase 1</td>
-      <td>Clase 1</td>
-      <td>Clase 1</td>
-      <td>Clase 1</td>
-      <td>Clase 1</td>
-    </tr>
-
-    <tr>
-      <th>9:00</th>
-      <td rowspan="2">Clase 2 y 3</td>
-      <td>Clase 2</td>
-      <td>Clase 2</td>
-      <td>Clase 2</td>
-      <td>Clase 2</td>
-    </tr>
-
-    <tr>
-      <th>10:00</th>
-      <td>Clase 3</td>
-      <td>Clase 3</td>
-      <td>Clase 3</td>
-      <td>Clase 3</td>
- 
-    </tr>
-
-    <tr>
-      <th>11:00</th>
-      <td>Clase 4</td>
-      <td colspan="2">Clase 4</td>
-      <td>Clase 4</td>
-      <td>Clase 4</td>
-
-    </tr>
-
-    <tr>
-      <th>12:00</th>
-      <td>Clase 5</td>
-      <td>Clase 5</td>
-      <td>Clase 5</td>
-      <td>Clase 5</td>
-      <td>&nbsp;</td>
-    </tr>
-
-
-
-  </table>
+    <h1>Horario escolar</h1> <!-- Encabezado principal de la página -->
+    <table> <!-- Inicio de la tabla con borde -->
+        <tr> <!-- Fila de encabezados de la tabla -->
+            <th></th> <!-- Celda vacía para la esquina superior izquierda -->
+            <th>Lunes</th> <!-- Encabezado para la columna de los lunes -->
+            <th>Martes</th> <!-- Encabezado para la columna de los martes -->
+            <th>Miércoles</th> <!-- Encabezado para la columna de los miércoles -->
+            <th>Jueves</th> <!-- Encabezado para la columna de los jueves -->
+            <th>Viernes</th> <!-- Encabezado para la columna de los viernes -->
+        </tr>
+        <tr> <!-- Fila para las 8:00 -->
+            <td>8:00</td> <!-- Celda para la hora 8:00 -->
+            <td>Matemáticas</td> <!-- Asignatura a las 8:00 el lunes -->
+            <td>Lengua</td> <!-- Asignatura a las 8:00 el martes -->
+            <td>Ciencias</td> <!-- Asignatura a las 8:00 el miércoles -->
+            <td>Inglés</td> <!-- Asignatura a las 8:00 el jueves -->
+            <td>Educación Física</td> <!-- Asignatura a las 8:00 el viernes -->
+        </tr>
+        <tr> <!-- Fila para las 9:00 -->
+            <td>9:00</td> <!-- Celda para la hora 9:00 -->
+            <td rowspan="2">Historia</td> <!-- Asignatura a las 9:00 y 10:00 el lunes, celdas unificadas verticalmente -->
+            <td>Matemáticas</td> <!-- Asignatura a las 9:00 el martes -->
+            <td>Lengua</td> <!-- Asignatura a las 9:00 el miércoles -->
+            <td>Arte</td> <!-- Asignatura a las 9:00 el jueves -->
+            <td>Ciencias</td> <!-- Asignatura a las 9:00 el viernes -->
+        </tr>
+        <tr> <!-- Fila para las 10:00 -->
+            <td>10:00</td> <!-- Celda para la hora 10:00 -->
+            <td>Inglés</td> <!-- Asignatura a las 10:00 el martes -->
+            <td>Matemáticas</td> <!-- Asignatura a las 10:00 el miércoles -->
+            <td>Geografía</td> <!-- Asignatura a las 10:00 el jueves -->
+            <td>Lengua</td> <!-- Asignatura a las 10:00 el viernes -->
+        </tr>
+        <tr> <!-- Fila para las 11:00 -->
+            <td>11:00</td> <!-- Celda para la hora 11:00 -->
+            <td>Química</td> <!-- Asignatura a las 11:00 el lunes -->
+            <td colspan="2">Física</td> <!-- Asignatura a las 11:00 el martes y miércoles, celdas unificadas horizontalmente -->
+            <td>Matemáticas</td> <!-- Asignatura a las 11:00 el jueves -->
+            <td>Historia</td> <!-- Asignatura a las 11:00 el viernes -->
+        </tr>
+        <tr> <!-- Fila para las 12:00 -->
+            <td>12:00</td> <!-- Celda para la hora 12:00 -->
+            <td>Biología</td> <!-- Asignatura a las 12:00 el lunes -->
+            <td>Geografía</td> <!-- Asignatura a las 12:00 el martes -->
+            <td>Arte</td> <!-- Asignatura a las 12:00 el miércoles -->
+            <td>Historia</td> <!-- Asignatura a las 12:00 el jueves -->
+            <td></td> <!-- Celda vacía a las 12:00 el viernes -->
+        </tr>
+    </table>
 </body>
-
 </html>
 
 
